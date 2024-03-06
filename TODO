@@ -1,11 +1,16 @@
 1. properties to YAML
-2. Health check API
+2. Health check API - Mysql -> raw queries
 3. Global Exception Handler
 4. Entity
 5. Repository
-6. 3 Services for Encryption & Decryption
-7. Master service for injecting sub services
+6. 4 Services for Encryption(md5 , base64, key Generation) & Decryption & validation & health Check
+7. Master service for injecting sub services -> and then while returning return with custom alias if flag true(depends)
 8. Redirection controller only for encrypted URLs
 9. DTOs on demand
 10. Exceptions on demand
-11. Encoder controller Decoder controller
+11. Encoder controller Decoder controller, healthCheck controller
+
+
+REFERENCE URL :- https://medium.com/@sandeep4.verma/system-design-scalable-url-shortener-service-like-tinyurl-106f30f23a82
+DB MODEL URL :- https://drawsql.app/teams/hackers-5/diagrams/tinyurl
+PHASE LEVEL DEVELOPMENT :- https://whimsical.com/phase-0-LmV7kKzzcxNaEkfrjwtyy6
