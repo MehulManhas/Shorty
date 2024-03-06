@@ -1,0 +1,11 @@
+1. properties to YAML
+2. Health check API
+3. Global Exception Handler
+4. Entity
+5. Repository
+6. 3 Services for Encryption & Decryption
+7. Master service for injecting sub services
+8. Redirection controller only for encrypted URLs
+9. DTOs on demand
+10. Exceptions on demand
+11. Encoder controller Decoder controller
