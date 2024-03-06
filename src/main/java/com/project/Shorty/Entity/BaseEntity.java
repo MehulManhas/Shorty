@@ -5,12 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 @Getter
 @Setter
 @MappedSuperclass
-public class BaseModel {
+public class BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
