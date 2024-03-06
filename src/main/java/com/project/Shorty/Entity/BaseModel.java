@@ -1,4 +1,4 @@
-package com.project.Shorty.Model;
+package com.project.Shorty.Entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
