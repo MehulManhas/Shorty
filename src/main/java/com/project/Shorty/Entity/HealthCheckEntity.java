@@ -1,4 +1,4 @@
-package com.project.Shorty.Model;
+package com.project.Shorty.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -7,5 +7,7 @@ import jakarta.persistence.Id;
 public class HealthCheckEntity {
 
     @Id
+    private Long id;
+
     private int result;
 }
