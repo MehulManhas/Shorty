@@ -1,10 +1,10 @@
 package com.project.Shorty.DTO;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Data
-public class LongURLResponseDto {
+@Getter
+@Setter
+public class LongURLResponseDTO {
     String longURL;
 }
