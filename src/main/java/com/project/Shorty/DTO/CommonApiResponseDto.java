@@ -2,7 +2,9 @@ package com.project.Shorty.DTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.project.Shorty.Util.Util;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 import java.sql.Timestamp;

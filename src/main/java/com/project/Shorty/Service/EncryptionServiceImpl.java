@@ -2,7 +2,7 @@ package com.project.Shorty.Service;
 
 import com.project.Shorty.DTO.ShortenedURLResponseDTO;
 import com.project.Shorty.Entity.URLMappingEntity;
-import com.project.Shorty.Enum.EncryptionType;
+import com.project.Shorty.Enum.EncryptionAlgorithm;
 import com.project.Shorty.Exception.URLHashingException;
 import com.project.Shorty.Repository.URLMappingRepository;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +30,7 @@ public class EncryptionServiceImpl implements EncryptionService {
             URLMappingEntity urlMappingEntity = new URLMappingEntity();
             urlMappingEntity.setShortenedURL(shortUrl);
             urlMappingEntity.setRequestedURL(longUrl);
-            urlMappingEntity.setEncodingType(EncryptionType.MD5);
+            urlMappingEntity.setEncodingType(EncryptionAlgorithm.MD5);
             urlMappingRepository.save(urlMappingEntity);
 
             ShortenedURLResponseDTO shortenedURLResponseDTO = new ShortenedURLResponseDTO();
@@ -50,7 +50,7 @@ public class EncryptionServiceImpl implements EncryptionService {
             URLMappingEntity urlMappingEntity = new URLMappingEntity();
             urlMappingEntity.setRequestedURL(longUrl);
             urlMappingEntity.setShortenedURL(shortUrl);
-            urlMappingEntity.setEncodingType(EncryptionType.UUID);
+            urlMappingEntity.setEncodingType(EncryptionAlgorithm.UUID);
             urlMappingRepository.save(urlMappingEntity);
 
             ShortenedURLResponseDTO shortenedURLResponseDTO = new ShortenedURLResponseDTO();
@@ -79,7 +79,7 @@ public class EncryptionServiceImpl implements EncryptionService {
             throw new RuntimeException(e);
         }
     }
-    public  String generateRandomShortUrl(String longURL) {
+    private String generateRandomShortUrl(String longURL) {
         String hash= this.convertURLToMD5Hash(longURL);
         int numberOfCharsInHash=hash.length();
         int counter=0;

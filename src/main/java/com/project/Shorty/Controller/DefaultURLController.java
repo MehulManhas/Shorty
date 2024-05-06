@@ -6,7 +6,6 @@ import com.project.Shorty.DTO.ShortenedURLResponseDTO;
 import com.project.Shorty.Exception.URLHashingException;
 import com.project.Shorty.Service.EncryptionService;
 import com.project.Shorty.Service.SearchService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
