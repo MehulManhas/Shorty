@@ -7,8 +7,6 @@ import jakarta.persistence.Enumerated;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.awt.image.BufferedImage;
-
 @Getter
 @Setter
 @Entity(name = "QRCode")

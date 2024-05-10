@@ -1,6 +1,9 @@
 package com.project.Shorty.Service;
 
-import com.project.Shorty.DTO.*;
+import com.project.Shorty.DTO.CommonApiResponseDto;
+import com.project.Shorty.DTO.CustomURLRequestDTO;
+import com.project.Shorty.DTO.LongURLResponseDTO;
+import com.project.Shorty.DTO.ShortenedURLResponseDTO;
 import com.project.Shorty.Entity.CustomURLMappingEntity;
 import com.project.Shorty.Repository.CustomURLMappingRepository;
 import lombok.RequiredArgsConstructor;
@@ -43,11 +46,11 @@ public class CustomURLServiceImpl implements CustomURLService{
     }
 
     @Override
-    public LongURLResponseDto getCustomURL(String customShortURL) {
+    public LongURLResponseDTO getCustomURL(String customShortURL) {
 
         String[] urlArr = customShortURL.split("/");
         CustomURLMappingEntity customURLMappingEntity = customURLMappingRepository.findCustomURLMappingEntitiesByCustomAlias(urlArr[urlArr.length-1]);
-        LongURLResponseDto longURLResponseDTO = new LongURLResponseDto();
+        LongURLResponseDTO longURLResponseDTO = new LongURLResponseDTO();
         longURLResponseDTO.setLongURL(customURLMappingEntity.getRequestedURL());
 
         return longURLResponseDTO;

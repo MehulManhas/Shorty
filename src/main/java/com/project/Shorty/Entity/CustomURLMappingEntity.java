@@ -1,7 +1,7 @@
 package com.project.Shorty.Entity;
 
 import com.fasterxml.jackson.annotation.JsonRawValue;
-import com.project.Shorty.Enum.EncryptionType;
+import com.project.Shorty.Enum.EncryptionAlgorithm;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -17,7 +17,7 @@ public class CustomURLMappingEntity extends BaseEntity{
     private String customAlias;
     private String emailId;
     @Enumerated(EnumType.ORDINAL)
-    private EncryptionType encodingType;
+    private EncryptionAlgorithm encodingType;
     private String QRCodeURL;
 
    public CustomURLMappingEntity(){}

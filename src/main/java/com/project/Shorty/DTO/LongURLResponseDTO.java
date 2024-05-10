@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class LongURLResponseDto {
+public class LongURLResponseDTO {
     String longURL;
 }

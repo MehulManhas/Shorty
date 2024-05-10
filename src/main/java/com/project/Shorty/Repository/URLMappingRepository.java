@@ -2,11 +2,8 @@ package com.project.Shorty.Repository;
 
 import com.project.Shorty.Entity.URLMappingEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.net.URL;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Optional;
 
