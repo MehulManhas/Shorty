@@ -25,5 +25,5 @@ url:
 aws:
   client:
     key:
-      accessKey: "AKIA6GBMF34N6HJX3BHQ"
-      secrectAccessKey: "A3tHyIqzrvxeqxnkLDKOYxte0/PbphcKogkMPNLp"
+      accessKey: ${AWS_ACCESS_KEY}
+      secretAccessKey: ${AWS_SECRET_ACCESS_KEY}

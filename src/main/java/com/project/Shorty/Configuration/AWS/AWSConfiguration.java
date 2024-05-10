@@ -14,7 +14,7 @@ public class AWSConfiguration {
 
     @Value("${aws.client.key.accessKey}")
     private String accessKey;
-    @Value("${aws.client.key.secrectAccessKey}")
+    @Value("${aws.client.key.secretAccessKey}")
     private String secretKey;
 
     public AWSCredentials getAwsCredentials(){
@@ -24,4 +24,5 @@ public class AWSConfiguration {
         );
         return awsCredentials;
     }
+
 }
