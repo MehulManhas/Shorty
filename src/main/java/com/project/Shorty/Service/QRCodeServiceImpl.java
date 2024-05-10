@@ -7,11 +7,9 @@ import com.google.zxing.oned.EAN13Writer;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.project.Shorty.DTO.QRCodeResponseDTO;
 import com.project.Shorty.Entity.QRCodeEntity;
-import com.project.Shorty.Entity.URLMappingEntity;
 import com.project.Shorty.Enum.QRCodeType;
 import com.project.Shorty.Exception.QRCodeGenerationException;
 import com.project.Shorty.Repository.QRCodeMappingRepository;
-import com.project.Shorty.Repository.URLMappingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +18,6 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 

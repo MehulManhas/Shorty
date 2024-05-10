@@ -12,9 +12,9 @@ import org.springframework.context.annotation.Configuration;
 @RequiredArgsConstructor
 public class AWSConfiguration {
 
-    @Value("${aws.key.accessKey}")
+    @Value("${aws.client.key.accessKey}")
     private String accessKey;
-    @Value("${aws.key.secrectAccessKey}")
+    @Value("${aws.client.key.secretAccessKey}")
     private String secretKey;
 
     public AWSCredentials getAwsCredentials(){
