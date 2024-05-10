@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+
 @RestController
 @RequestMapping("/v1")
 public class DefaultURLController {
@@ -54,11 +56,13 @@ public class DefaultURLController {
     }
 
     @GetMapping("/{shortenedHash}")
-    public ResponseEntity<LongURLResponseDTO> getFullURL(@PathVariable("shortenedHash") String shortenedHash) {
+    public ResponseEntity<Void> getFullURL(@PathVariable("shortenedHash") String shortenedHash) {
         try{
             String shortenedUrl = baseUrl + shortenedHash;
             LongURLResponseDTO longURLResponseDto = searchService.getLongURL(shortenedUrl);
-            return new ResponseEntity<>(longURLResponseDto, HttpStatus.OK);
+            return ResponseEntity.status(HttpStatus.FOUND)
+                    .location(new URI(longURLResponseDto.getLongURL()))
+                    .build();
         }
         catch (Exception ex){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

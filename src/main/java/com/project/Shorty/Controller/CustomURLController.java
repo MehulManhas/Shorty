@@ -9,12 +9,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+
 @RestController
 @RequestMapping("/v1")
 @RequiredArgsConstructor
 public class CustomURLController {
     private final CustomURLService customURLService;
-
 
     @PostMapping("/customURL")
     public ResponseEntity<ShortenedURLResponseDTO> getCustomURL(@RequestBody CustomURLRequestDTO customURLRequestDTO) {
@@ -27,10 +28,12 @@ public class CustomURLController {
         }
     }
     @GetMapping("/c/{shortURL}")
-    public ResponseEntity<LongURLResponseDTO> getShortenedURL(@PathVariable("shortURL") String shortURL) {
+    public ResponseEntity<Void> getLongURL(@PathVariable("shortURL") String shortURL) {
         try{
             LongURLResponseDTO longURLResponseDTO = customURLService.getCustomURL(shortURL);
-           return new ResponseEntity<>(longURLResponseDTO, HttpStatus.OK);
+           return ResponseEntity.status(HttpStatus.FOUND)
+                   .location(new URI(longURLResponseDTO.getLongURL()))
+                   .build();
         }
         catch (Exception e){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
