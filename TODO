@@ -9,7 +9,12 @@
 9. DTOs on demand
 10. Exceptions on demand
 11. Encoder controller Decoder controller, healthCheck controller
-
+v2
+12. Infinite loop
+14. custom url overwrite
+15. QR code size limiting - obscuring base url
+16. rate limiting
+17. monitoring requests
 
 REFERENCE URL :- https://medium.com/@sandeep4.verma/system-design-scalable-url-shortener-service-like-tinyurl-106f30f23a82
 DB MODEL URL :- https://drawsql.app/teams/hackers-5/diagrams/tinyurl

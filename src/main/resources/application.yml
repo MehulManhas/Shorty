@@ -13,7 +13,7 @@ spring:
       minimum-idle: 3
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
 
 
 logging:
